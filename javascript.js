@@ -62,33 +62,41 @@ console.log(getHumanChoice)
     }
 
     function playGame() {
-        const humanSelection1 = getHumanChoice();
-        const computerSelection1 = getComputerChoice();
-        playRound(humanSelection1, computerSelection1);
+
+        for (let i=0; i<5; i++) {
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+
+            console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
+        }
+        // const humanSelection1 = getHumanChoice();
+        // const computerSelection1 = getComputerChoice();
+        // playRound(humanSelection1, computerSelection1);
         
-        console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
+        // console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
         
-        const humanSelection2 = getHumanChoice();
-        const computerSelection2 = getComputerChoice();
-        playRound(humanSelection2, computerSelection2);
+        // const humanSelection2 = getHumanChoice();
+        // const computerSelection2 = getComputerChoice();
+        // playRound(humanSelection2, computerSelection2);
 
-        console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
+        // console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
 
-        const humanSelection3 = getHumanChoice();
-        const computerSelection3 = getComputerChoice();
-        playRound(humanSelection3, computerSelection3);
+        // const humanSelection3 = getHumanChoice();
+        // const computerSelection3 = getComputerChoice();
+        // playRound(humanSelection3, computerSelection3);
 
-        console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
+        // console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
 
-        const humanSelection4 = getHumanChoice();
-        const computerSelection4 = getComputerChoice();
-        playRound(humanSelection4, computerSelection4);
+        // const humanSelection4 = getHumanChoice();
+        // const computerSelection4 = getComputerChoice();
+        // playRound(humanSelection4, computerSelection4);
 
-        console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
+        // console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
 
-        const humanSelection5 = getHumanChoice();
-        const computerSelection5 = getComputerChoice();
-        playRound(humanSelection5, computerSelection5);
+        // const humanSelection5 = getHumanChoice();
+        // const computerSelection5 = getComputerChoice();
+        // playRound(humanSelection5, computerSelection5);
 
         console.log("Game Over");
         console.log('Final Score:', 'Human =', humanScore, 'Computer =', computerScore);
