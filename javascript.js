@@ -1,8 +1,8 @@
 function getComputerChoice() {
-
-if (Math.random() <= 0.333) {
+const rand = Math.random();
+if (rand <= 0.333) {
     return "rock";
-} else if (Math.random() >=0.667) {
+} else if (rand >=0.667) {
     return "paper";
 } else {
     return "scissors";
@@ -15,7 +15,7 @@ console.log(getComputerChoice)
 
 function getHumanChoice() {
 
-return prompt("Please enter rock, paper, or scissors.")
+// return prompt("Please enter rock, paper, or scissors.")
 
 }
 
@@ -55,7 +55,7 @@ console.log(getHumanChoice)
             console.log("You Lose! Rock beats Scissors");
             computerScore++;
         }
-        else {
+        else if (humanChoice ==="scissors" && computerChoice === "paper") {
             console.log("You Win! Scissors beats Paper");
             humanScore++;
         }
@@ -64,7 +64,7 @@ console.log(getHumanChoice)
     
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    // playRound(humanSelection, computerSelection);
 //     function playGame() {
 
 //         for (let i=0; i<5; i++) {
@@ -87,3 +87,23 @@ console.log(getHumanChoice)
 //       }
 // }
 // playGame();
+
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+
+
+rock.addEventListener ("click", () => {
+    playRound("rock", getComputerChoice())
+});
+
+
+paper.addEventListener("click", () => {
+    playRound("paper", getComputerChoice())
+});
+
+
+scissors.addEventListener("click", () => {
+    playRound("scissors", getComputerChoice())});
+
