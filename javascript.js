@@ -10,7 +10,6 @@ if (rand <= 0.333) {
 
 }
 
-console.log(getComputerChoice)
 
 
 function getHumanChoice() {
@@ -19,9 +18,9 @@ function getHumanChoice() {
 
 }
 
-console.log(getHumanChoice)
 
 
+const displayResults = document.querySelector("#display");
 
 
     let humanScore = 0;
@@ -31,32 +30,32 @@ console.log(getHumanChoice)
         humanChoice = humanChoice.toLowerCase();
 
         if (humanChoice === computerChoice) {
-            console.log("TIE!");
+            displayResults.textContent = "TIE!";
         }
 
         else if (humanChoice === "rock" && computerChoice === "paper") {
-            console.log("You lose! Paper beats Rock");
+            displayResults.textContent = "You lose! Paper beats Rock";
             computerScore++;
         }
 
         else if (humanChoice === "rock" && computerChoice === "scissors") {
-            console.log("You Win! Rock beats Scissors");
+            displayResults.textContent = "You Win! Rock beats Scissors";
             humanScore++;
         }
         else if (humanChoice === "paper" && computerChoice === "rock") {
-            console.log("You Win! Paper beats Rock");
+            displayResults.textContent = "You Win! Paper beats Rock";
             humanScore++;
         }
         else if (humanChoice === "paper" && computerChoice === "scissors") {
-            console.log("You Lose! Scissors beats Paper");
+            displayResults.textContent = "You Lose! Scissors beats Paper";
             computerScore++;
         }
         else if (humanChoice === "scissors" && computerChoice === "rock") {
-            console.log("You Lose! Rock beats Scissors");
+            displayResults.textContent = "You Lose! Rock beats Scissors";
             computerScore++;
         }
         else if (humanChoice ==="scissors" && computerChoice === "paper") {
-            console.log("You Win! Scissors beats Paper");
+            displayResults.textContent = "You Win! Scissors beats Paper";
             humanScore++;
         }
     }
