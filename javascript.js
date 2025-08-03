@@ -11,15 +11,6 @@ if (rand <= 0.333) {
 }
 
 
-
-function getHumanChoice() {
-
-// return prompt("Please enter rock, paper, or scissors.")
-
-}
-
-
-
 const displayResults = document.querySelector("#display");
 
 
@@ -27,7 +18,6 @@ const displayResults = document.querySelector("#display");
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
-        humanChoice = humanChoice.toLowerCase();
 
         if (humanChoice === computerChoice) {
             displayResults.textContent = "TIE!";
@@ -60,32 +50,8 @@ const displayResults = document.querySelector("#display");
         }
     }
 
-    
-    const humanSelection = getHumanChoice();
+
     const computerSelection = getComputerChoice();
-    // playRound(humanSelection, computerSelection);
-//     function playGame() {
-
-//         for (let i=0; i<5; i++) {
-//             const humanSelection = getHumanChoice();
-//             const computerSelection = getComputerChoice();
-//             playRound(humanSelection, computerSelection);
-
-//             console.log('Current Score:', 'You =',humanScore, ', Computer =', computerScore);
-//         }
-       
-//         console.log("Game Over");
-//         console.log('Final Score:', 'Human =', humanScore, 'Computer =', computerScore);
-
-//       if (humanScore>computerScore) {
-//         console.log("I Guess You Win :(");
-//       }  else if (humanScore<computerScore) {
-//         console.log("I Win Yay!!");
-//       } else {
-//         console.log("We Tied!");
-//       }
-// }
-// playGame();
 
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
